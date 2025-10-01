@@ -11,9 +11,9 @@ create_package_code(
                 ${INSTALL_DIR}/bin/dcmimgle.dll
 		${INSTALL_DIR}/bin/dcmimage.dll
                 ${INSTALL_DIR}/bin/dcmjpeg.dll
-                ${INSTALL_DIR}/bin/libijg8.dll
-                ${INSTALL_DIR}/bin/libijg12.dll
-                ${INSTALL_DIR}/bin/libijg16.dll
+                ${INSTALL_DIR}/bin/ijg8.dll
+                ${INSTALL_DIR}/bin/ijg12.dll
+                ${INSTALL_DIR}/bin/ijg16.dll
                 ${INSTALL_DIR}/bin/oflog.dll
                 ${INSTALL_DIR}/bin/ofstd.dll
 		DESTINATION ${POST_INSTALL_DIR}/bin/
