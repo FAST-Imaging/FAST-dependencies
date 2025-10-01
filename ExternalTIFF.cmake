@@ -11,17 +11,15 @@ create_package_code("
 ExternalProject_Add(tiff
         PREFIX ${BUILD_DIR}
         BINARY_DIR ${BUILD_DIR}
-        DEPENDS libjpeg zlib
+        DEPENDS zlib
         GIT_REPOSITORY "https://gitlab.com/libtiff/libtiff/"
         GIT_TAG "v4.3.0"
         UPDATE_COMMAND "" # Hack to avoid rebuild all the time on linux
         CMAKE_ARGS
-          -Djpeg=ON
+          -Djpeg=OFF
           -Dold-jpeg=ON
           -Dzlib=ON
 	  -Djbig=OFF # JBIG is GPL
-	  -DJPEG_INCLUDE_DIR=${TOP_BUILD_DIR}/libjpeg/src/libjpeg/LibJPEG/9d/include/
-	  -DJPEG_LIBRARY_RELEASE=${TOP_BUILD_DIR}/libjpeg/src/libjpeg/LibJPEG/9d/lib/libjpeg.lib
 	  -DZLIB_INCLUDE_DIR=${TOP_BUILD_DIR}/zlib/install/include/
 	  -DZLIB_LIBRARY_RELEASE=${TOP_BUILD_DIR}/zlib/Release/zlib.lib
         CMAKE_CACHE_ARGS
