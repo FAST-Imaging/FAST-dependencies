@@ -42,7 +42,7 @@ ExternalProject_Add(tiff
         GIT_TAG "v4.3.0"
         UPDATE_COMMAND "" # Hack to avoid rebuild all the time on linux
         CMAKE_ARGS
-          -Djpeg=ON
+          -Djpeg=OFF
           -Dold-jpeg=ON
 	  -Djbig=OFF # JBIG is GPL
           -Dzlib=ON
